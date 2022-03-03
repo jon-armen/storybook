@@ -1,7 +1,9 @@
 import path from 'path';
 import { TransformOptions } from '@babel/core';
-import { Configuration } from 'webpack';
-import { findDistEsm, StorybookConfig } from '@storybook/core-common';
+import { findDistEsm } from '@storybook/core-common';
+
+import type { Configuration } from 'webpack';
+import type { StorybookConfig } from '@storybook/core-common';
 
 export function babelDefault(config: TransformOptions): TransformOptions {
   return {

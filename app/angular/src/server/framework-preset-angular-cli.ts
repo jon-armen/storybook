@@ -1,4 +1,4 @@
-import webpack from 'webpack';
+import type { Configuration } from 'webpack';
 import { logger } from '@storybook/node-logger';
 import { targetFromTargetString, BuilderContext, Target } from '@angular-devkit/architect';
 import { sync as findUpSync } from 'find-up';
@@ -10,14 +10,14 @@ import { moduleIsAvailable } from './utils/module-is-available';
 import { getWebpackConfig as getWebpackConfig12_2_x } from './angular-cli-webpack-12.2.x';
 import { getWebpackConfig as getWebpackConfig13_x_x } from './angular-cli-webpack-13.x.x';
 import { getWebpackConfig as getWebpackConfigOlder } from './angular-cli-webpack-older';
-import { PresetOptions } from './options';
+import type { PresetOptions } from './options';
 import {
   getDefaultProjectName,
   findAngularProjectTarget,
   readAngularWorkspaceConfig,
 } from './angular-read-workspace';
 
-export async function webpackFinal(baseConfig: webpack.Configuration, options: PresetOptions) {
+export async function webpackFinal(baseConfig: Configuration, options: PresetOptions) {
   if (!moduleIsAvailable('@angular-devkit/build-angular')) {
     logger.info('=> Using base config because "@angular-devkit/build-angular" is not installed');
     return baseConfig;
@@ -32,9 +32,9 @@ export async function webpackFinal(baseConfig: webpack.Configuration, options: P
     info: string;
     condition: boolean;
     getWebpackConfig(
-      baseConfig: webpack.Configuration,
+      baseConfig: Configuration,
       options: PresetOptions
-    ): Promise<webpack.Configuration> | webpack.Configuration;
+    ): Promise<Configuration> | Configuration;
   }[] = [
     {
       info: '=> Loading angular-cli config for angular >= 13.0.0',

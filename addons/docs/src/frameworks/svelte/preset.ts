@@ -1,6 +1,6 @@
 import path from 'path';
 
-import { Configuration } from 'webpack';
+import type { Configuration } from 'webpack';
 import type { Options } from '@storybook/core-common';
 
 export async function webpackFinal(webpackConfig: Configuration, options: Options) {
