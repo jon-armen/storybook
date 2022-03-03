@@ -1,5 +1,5 @@
-import { SynchronousPromise } from 'synchronous-promise';
-import {
+import type { SynchronousPromise } from 'synchronous-promise';
+import type {
   DecoratorFunction,
   Args,
   StoryContextForEnhancers,

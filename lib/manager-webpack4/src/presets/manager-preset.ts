@@ -1,6 +1,7 @@
 import path from 'path';
 import fse from 'fs-extra';
-import { DefinePlugin, Configuration, WebpackPluginInstance } from 'webpack';
+import { DefinePlugin } from 'webpack';
+import type { Configuration, WebpackPluginInstance } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin';
 import PnpWebpackPlugin from 'pnp-webpack-plugin';

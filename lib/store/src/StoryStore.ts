@@ -1,5 +1,5 @@
 import memoize from 'memoizerific';
-import {
+import type {
   Parameters,
   StoryId,
   StoryContextForLoaders,
@@ -12,13 +12,13 @@ import {
 import mapValues from 'lodash/mapValues';
 import pick from 'lodash/pick';
 import global from 'global';
-import { SynchronousPromise } from 'synchronous-promise';
+import type { SynchronousPromise } from 'synchronous-promise';
 
 import { StoryIndexStore } from './StoryIndexStore';
 import { ArgsStore } from './ArgsStore';
 import { GlobalsStore } from './GlobalsStore';
 import { processCSFFile, prepareStory, normalizeProjectAnnotations } from './csf';
-import {
+import type {
   CSFFile,
   ModuleImportFn,
   Story,

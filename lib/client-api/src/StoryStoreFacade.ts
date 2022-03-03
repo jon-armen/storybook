@@ -10,16 +10,14 @@ import {
   StoryFn,
   storyNameFromExport,
 } from '@storybook/csf';
-import {
+import { StoryStore, autoTitle, sortStoriesV6 } from '@storybook/store';
+import type {
   NormalizedProjectAnnotations,
   NormalizedStoriesSpecifier,
   Path,
   StoryIndex,
   ModuleExports,
-  StoryStore,
   Story,
-  autoTitle,
-  sortStoriesV6,
   StoryIndexEntry,
 } from '@storybook/store';
 import { logger } from '@storybook/client-logger';

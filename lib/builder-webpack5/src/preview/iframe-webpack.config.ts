@@ -1,12 +1,7 @@
 import path, { dirname, join } from 'path';
 import { sync } from 'pkg-dir';
-import {
-  Configuration,
-  DefinePlugin,
-  HotModuleReplacementPlugin,
-  ProgressPlugin,
-  ProvidePlugin,
-} from 'webpack';
+import { DefinePlugin, HotModuleReplacementPlugin, ProgressPlugin, ProvidePlugin } from 'webpack';
+import type { Configuration } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin';
 import TerserWebpackPlugin from 'terser-webpack-plugin';

@@ -1,9 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/triple-slash-reference
 /// <reference path="./typings.d.ts" />
 
-// who are you going to call? cache-busters!
-
-import webpack, { Stats, Configuration, ProgressPlugin } from 'webpack';
+import webpack from 'webpack';
+import type { Stats, Configuration, ProgressPlugin } from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import { logger } from '@storybook/node-logger';

@@ -4,7 +4,7 @@ import dedent from 'ts-dedent';
 import mapValues from 'lodash/mapValues';
 import countBy from 'lodash/countBy';
 import global from 'global';
-import {
+import type {
   StoryId,
   ComponentTitle,
   StoryKind,
@@ -17,8 +17,8 @@ import {
 
 import { combineParameters } from '../index';
 import merge from './merge';
-import { Provider } from '../modules/provider';
-import { ViewMode } from '../modules/addons';
+import type { Provider } from '../modules/provider';
+import type { ViewMode } from '../modules/addons';
 
 const { FEATURES } = global;
 

@@ -1,5 +1,5 @@
 import { AnyFramework } from '@storybook/csf';
-import { ClientStoryApi, Loadable } from '@storybook/addons';
+import type { ClientStoryApi, Loadable } from '@storybook/addons';
 import { ClientApi as ClientApiClass } from '@storybook/client-api';
 import { StoryshotsOptions } from '../api/StoryshotsOptions';
 import { SupportedFramework } from './SupportedFramework';

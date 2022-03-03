@@ -19,15 +19,9 @@ import {
   GlobalTypes,
   LegacyStoryFn,
 } from '@storybook/csf';
-import {
-  NormalizedComponentAnnotations,
-  Path,
-  ModuleImportFn,
-  combineParameters,
-  StoryStore,
-  normalizeInputTypes,
-} from '@storybook/store';
-import { ClientApiAddons, StoryApi } from '@storybook/addons';
+import { combineParameters, StoryStore, normalizeInputTypes } from '@storybook/store';
+import type { NormalizedComponentAnnotations, Path, ModuleImportFn } from '@storybook/store';
+import type { ClientApiAddons, StoryApi } from '@storybook/addons';
 
 import { StoryStoreFacade } from './StoryStoreFacade';
 
