@@ -108,6 +108,14 @@ const run = async ({ cwd, flags }: { cwd: string; flags: string[] }) => {
         const name = descriptor.split('@virtual')[0];
         return !pkg.dependencies[name];
       })
+      .filter(({ descriptor }) => {
+        const name = descriptor.split('@npm')[0];
+        return !pkg.peerDependencies[name];
+      })
+      .filter(({ descriptor }) => {
+        const name = descriptor.split('@virtual')[0];
+        return !pkg.peerDependencies[name];
+      })
       .filter(({ locator }) => !locator.includes('workspace:'))
       .map(({ locator, descriptor }) => {
         const version = locator.split('npm:')[1];

@@ -16,6 +16,9 @@ function filterObject(obj: Record<string, any>, keys: string[]) {
   return obj;
 }
 
+// link to a astexplorer.com gist with some code and resulting AST:
+// https://astexplorer.net/#/gist/7790dec0a627f5c947743caa3c1e2e14/0ddec46fecfe2bd8e2871820e34f224b9598583e
+
 export const babelModulesLocalizePlugin = (
   localize: (p: string, isResolve?: boolean) => string,
   report = (err: Error): void => {
