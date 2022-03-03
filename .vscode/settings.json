@@ -1,6 +1,4 @@
 {
   "deepscan.enable": true,
-  "cSpell.words": [
-    "localize"
-  ]
+  "cSpell.language": "en,en-US"
 }
