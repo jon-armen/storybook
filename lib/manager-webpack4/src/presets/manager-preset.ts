@@ -11,6 +11,7 @@ import TerserWebpackPlugin from 'terser-webpack-plugin';
 import uiPaths from '@storybook/ui/paths';
 
 import readPackage from 'read-pkg-up';
+import type { Options, ManagerWebpackOptions } from '@storybook/core-common';
 import {
   loadManagerOrAddonsFile,
   resolvePathInStorybookCache,
@@ -18,8 +19,6 @@ import {
   es6Transpiler,
   getManagerHeadTemplate,
   getManagerMainTemplate,
-  Options,
-  ManagerWebpackOptions,
 } from '@storybook/core-common';
 
 import { babelLoader } from './babel-loader-manager';

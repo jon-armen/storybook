@@ -12,8 +12,8 @@ import type {
   Args,
   ArgTypes,
   Parameters,
-  sanitize,
 } from '@storybook/csf';
+import { sanitize } from '@storybook/csf';
 
 import { combineParameters } from '../index';
 import merge from './merge';

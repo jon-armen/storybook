@@ -14,13 +14,12 @@ import {
   stringifyProcessEnvs,
   handlebars,
   interpolate,
-  Options,
   toImportFn,
   normalizeStories,
   readTemplate,
   loadPreviewOrConfigFile,
-  CoreConfig,
 } from '@storybook/core-common';
+import type { Options, CoreConfig } from '@storybook/core-common';
 import { createBabelLoader } from './babel-loader-preview';
 
 import { useBaseTsSupport } from './useBaseTsSupport';

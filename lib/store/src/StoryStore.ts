@@ -12,7 +12,7 @@ import type {
 import mapValues from 'lodash/mapValues';
 import pick from 'lodash/pick';
 import global from 'global';
-import type { SynchronousPromise } from 'synchronous-promise';
+import { SynchronousPromise } from 'synchronous-promise';
 
 import { StoryIndexStore } from './StoryIndexStore';
 import { ArgsStore } from './ArgsStore';

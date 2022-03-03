@@ -1,4 +1,4 @@
-import type { SynchronousPromise } from 'synchronous-promise';
+import { SynchronousPromise } from 'synchronous-promise';
 import type {
   DecoratorFunction,
   Args,

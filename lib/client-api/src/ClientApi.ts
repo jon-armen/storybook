@@ -2,18 +2,17 @@ import deprecate from 'util-deprecate';
 import dedent from 'ts-dedent';
 import global from 'global';
 import { logger } from '@storybook/client-logger';
-import {
+import { toId, sanitize } from '@storybook/csf';
+import type {
   Args,
   ArgTypes,
   AnyFramework,
-  toId,
   DecoratorFunction,
   Parameters,
   ArgTypesEnhancer,
   ArgsEnhancer,
   LoaderFunction,
   StoryFn,
-  sanitize,
   ComponentTitle,
   Globals,
   GlobalTypes,
