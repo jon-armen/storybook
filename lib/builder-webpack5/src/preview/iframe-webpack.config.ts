@@ -1,4 +1,4 @@
-import path, { join } from 'path';
+import path, { dirname, join } from 'path';
 import { sync } from 'pkg-dir';
 import {
   Configuration,
@@ -31,23 +31,23 @@ import { createBabelLoader } from './babel-loader-preview';
 import { useBaseTsSupport } from './useBaseTsSupport';
 
 const storybookPaths: Record<string, string> = [
-  'addons',
-  'api',
-  'channels',
-  'channel-postmessage',
-  'components',
-  'core-events',
-  'router',
-  'theming',
-  'semver',
-  'client-api',
-  'client-logger',
+  '@storybook/addons',
+  '@storybook/api',
+  '@storybook/channel-postmessage',
+  '@storybook/channels',
+  '@storybook/client-api',
+  '@storybook/client-logger',
+  '@storybook/components',
+  '@storybook/core-events',
+  '@storybook/preview-web',
+  '@storybook/router',
+  '@storybook/semver',
+  '@storybook/store',
+  '@storybook/theming',
 ].reduce(
   (acc, sbPackage) => ({
     ...acc,
-    [`@storybook/${sbPackage}`]: path.dirname(
-      require.resolve(`@storybook/${sbPackage}/package.json`)
-    ),
+    [sbPackage]: dirname(require.resolve(`${sbPackage}/package.json`)),
   }),
   {}
 );
