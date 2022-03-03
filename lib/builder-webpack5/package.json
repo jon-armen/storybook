@@ -42,11 +42,20 @@
   "dependencies": {
     "@babel/core": "^7.12.10",
     "@storybook/addons": "6.5.0-alpha.45",
+    "@storybook/api": "6.5.0-alpha.45",
     "@storybook/channel-postmessage": "6.5.0-alpha.45",
+    "@storybook/channels": "6.5.0-alpha.45",
     "@storybook/client-api": "6.5.0-alpha.45",
+    "@storybook/client-logger": "6.5.0-alpha.45",
+    "@storybook/components": "6.5.0-alpha.45",
     "@storybook/core-common": "6.5.0-alpha.45",
+    "@storybook/core-events": "6.5.0-alpha.45",
     "@storybook/node-logger": "6.5.0-alpha.45",
     "@storybook/preview-web": "6.5.0-alpha.45",
+    "@storybook/router": "6.5.0-alpha.45",
+    "@storybook/semver": "^7.3.2",
+    "@storybook/store": "6.5.0-alpha.45",
+    "@storybook/theming": "6.5.0-alpha.45",
     "core-js": "^3.8.2"
   },
   "devDependencies": {

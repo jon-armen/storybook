@@ -7113,6 +7113,7 @@ __metadata:
     "@storybook/semver": ^7.3.2
     "@storybook/store": 6.5.0-alpha.45
     "@storybook/theming": 6.5.0-alpha.45
+    "@storybook/ui": 6.5.0-alpha.45
     "@types/case-sensitive-paths-webpack-plugin": ^2.1.4
     "@types/node": ^14.0.10 || ^16.0.0
     "@types/terser-webpack-plugin": ^4.2.0
@@ -7162,11 +7163,20 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.10
     "@storybook/addons": 6.5.0-alpha.45
+    "@storybook/api": 6.5.0-alpha.45
     "@storybook/channel-postmessage": 6.5.0-alpha.45
+    "@storybook/channels": 6.5.0-alpha.45
     "@storybook/client-api": 6.5.0-alpha.45
+    "@storybook/client-logger": 6.5.0-alpha.45
+    "@storybook/components": 6.5.0-alpha.45
     "@storybook/core-common": 6.5.0-alpha.45
+    "@storybook/core-events": 6.5.0-alpha.45
     "@storybook/node-logger": 6.5.0-alpha.45
     "@storybook/preview-web": 6.5.0-alpha.45
+    "@storybook/router": 6.5.0-alpha.45
+    "@storybook/semver": ^7.3.2
+    "@storybook/store": 6.5.0-alpha.45
+    "@storybook/theming": 6.5.0-alpha.45
     "@types/case-sensitive-paths-webpack-plugin": ^2.1.4
     "@types/node": ^14.0.10 || ^16.0.0
     "@types/terser-webpack-plugin": ^5.0.2
