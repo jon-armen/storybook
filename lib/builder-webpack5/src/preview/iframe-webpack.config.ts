@@ -164,7 +164,7 @@ export default async (options: Options & Record<string, any>): Promise<Configura
       logging: 'error',
     },
     watchOptions: {
-      ignored: /node_modules/,
+      ignored: /(node_modules|local_modules)/,
     },
     ignoreWarnings: [
       {

@@ -76,7 +76,7 @@ export async function managerWebpack(
       publicPath: '',
     },
     watchOptions: {
-      ignored: /node_modules/,
+      ignored: [/node_modules/, /local_modules/],
     },
     plugins: [
       refs

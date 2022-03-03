@@ -3,5 +3,11 @@ const base = require('./jest.config.js');
 
 module.exports = {
   ...base,
-  testPathIgnorePatterns: ['/node_modules/', '/storybook-static/', 'angularshots.test.js', 'dist'],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/local_modules/',
+    '/storybook-static/',
+    'angularshots.test.js',
+    'dist',
+  ],
 };

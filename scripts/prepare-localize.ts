@@ -179,6 +179,8 @@ const run = async ({ cwd, flags }: { cwd: string; flags: string[] }) => {
       join(location, 'node_modules', '**', 'bower.json'),
       join(location, 'node_modules', '**', 'component.json'),
       join(location, 'node_modules', '**', 'gulpfile.js'),
+      join(location, 'node_modules', '**', 'yarn.lock'),
+      join(location, 'node_modules', '**', 'package-lock.json'),
       join(location, 'node_modules', '**', 'gulpfile.babel.js'),
       join(location, 'node_modules', '**', '@(jest|karma|webpack|rollup).config.js'),
       join(location, 'node_modules', '**', '*.@(png|jpg|jpeg|gif)'),

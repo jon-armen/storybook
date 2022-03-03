@@ -157,7 +157,7 @@ export default async (options: Options & Record<string, any>): Promise<Configura
       publicPath: '',
     },
     watchOptions: {
-      ignored: /node_modules/,
+      ignored: /(node_modules|local_modules)/,
     },
     plugins: [
       new FilterWarningsPlugin({

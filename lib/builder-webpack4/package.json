@@ -57,7 +57,8 @@
     "@storybook/store": "6.5.0-alpha.45",
     "@storybook/theming": "6.5.0-alpha.45",
     "@storybook/ui": "6.5.0-alpha.45",
-    "core-js": "^3.8.2"
+    "core-js": "^3.8.2",
+    "node-libs-browser": "^2.2.1"
   },
   "devDependencies": {
     "@types/case-sensitive-paths-webpack-plugin": "^2.1.4",

@@ -7131,6 +7131,7 @@ __metadata:
     fork-ts-checker-webpack-plugin: ^4.1.6
     global: ^4.4.0
     html-webpack-plugin: ^4.0.0
+    node-libs-browser: ^2.2.1
     pkg-dir: ^5.0.0
     pnp-webpack-plugin: 1.6.4
     postcss: ^7.0.36

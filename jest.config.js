@@ -56,6 +56,7 @@ module.exports = {
   modulePathIgnorePatterns: ['/dist/'],
   testPathIgnorePatterns: [
     '/node_modules/',
+    '/local_modules/',
     '/dist/',
     '/prebuilt/',
     'addon-jest.test.js',

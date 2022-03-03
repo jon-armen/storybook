@@ -24,6 +24,6 @@ export const babelLoader = () => {
       },
     ],
     include: [getProjectRoot()],
-    exclude: [/node_modules/, /dist/],
+    exclude: [/node_modules/, /local_modules/, /dist/],
   } as RuleSetRule;
 };
