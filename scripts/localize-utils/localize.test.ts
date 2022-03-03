@@ -25,25 +25,39 @@ describe('getPackageName', () => {
 
 describe('localize', () => {
   it('normal', () => {
-    expect(localize(reporter, '/projects/dist/esm/bar.js', 'foo')).toBe('../local_modules/foo');
+    expect(localize(reporter, [], '/projects/dist/esm/bar.js', 'foo')).toBe('../local_modules/foo');
   });
   it('deep', () => {
-    expect(localize(reporter, '/projects/dist/esm/bar.js', 'foo/foo')).toBe(
+    expect(localize(reporter, [], '/projects/dist/esm/bar.js', 'foo/foo')).toBe(
       '../local_modules/foo/foo'
     );
   });
   it('real deep', () => {
-    expect(localize(reporter, '/projects/dist/esm/bar.js', 'a/b/c/d')).toBe(
+    expect(localize(reporter, [], '/projects/dist/esm/bar.js', 'a/b/c/d')).toBe(
       '../local_modules/a/b/c/d'
     );
   });
   it('name spaced', () => {
-    expect(localize(reporter, '/projects/dist/esm/bar.js', '@a/b')).toBe('../local_modules/@a/b');
+    expect(localize(reporter, [], '/projects/dist/esm/bar.js', '@a/b')).toBe(
+      '../local_modules/@a/b'
+    );
   });
   it('name spaced and deep', () => {
-    expect(localize(reporter, '/projects/dist/esm/bar.js', '@a/b/c')).toBe(
+    expect(localize(reporter, [], '/projects/dist/esm/bar.js', '@a/b/c')).toBe(
       '../local_modules/@a/b/c'
     );
+  });
+  it('respect scoped externals', () => {
+    expect(localize(reporter, ['@a/b'], '/projects/dist/esm/bar.js', '@a/b')).toBe('@a/b');
+  });
+  it('respect deep scoped externals', () => {
+    expect(localize(reporter, ['@a/b'], '/projects/dist/esm/bar.js', '@a/b/c')).toBe('@a/b/c');
+  });
+  it('respect unscoped externals', () => {
+    expect(localize(reporter, ['a'], '/projects/dist/esm/bar.js', 'a/b')).toBe('a/b');
+  });
+  it('respect deep unscoped externals', () => {
+    expect(localize(reporter, ['a'], '/projects/dist/esm/bar.js', 'a/b/c')).toBe('a/b/c');
   });
 });
 
@@ -52,7 +66,7 @@ describe('error reporting', () => {
     (resolveFrom as jest.MockedFunction<typeof resolveFrom>).mockImplementationOnce(() => {
       throw new Error('A');
     });
-    expect(localize(reporter, '/projects/dist/esm/bar.js', '@a/b/c')).toBe('@a/b/c');
+    expect(localize(reporter, [], '/projects/dist/esm/bar.js', '@a/b/c')).toBe('@a/b/c');
     expect(reporter).toHaveBeenCalledWith(new Error('A'));
   });
 });
