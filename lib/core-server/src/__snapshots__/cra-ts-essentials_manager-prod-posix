@@ -35,6 +35,7 @@ Object {
       Object {
         "exclude": Array [
           "NODE_MODULES/",
+          "NODE_MODULES/",
           "/dist/",
         ],
         "include": Array [

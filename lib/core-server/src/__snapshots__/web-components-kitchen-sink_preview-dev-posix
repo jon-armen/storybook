@@ -39,7 +39,11 @@ Object {
   "module": Object {
     "rules": Array [
       Object {
-        "exclude": "NODE_MODULES/",
+        "exclude": Array [
+          "NODE_MODULES/",
+          "NODE_MODULES/",
+          "/dist/",
+        ],
         "include": Array [
           "ROOT",
         ],
