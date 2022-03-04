@@ -278,11 +278,24 @@ export abstract class JsPackageManager {
   Promise<T extends true ? string[] : string>;
 
   public executeCommand(command: string, args: string[], stdio?: 'pipe' | 'inherit'): string {
-    const commandResult = spawnSync(command, args, {
-      stdio: stdio ?? 'pipe',
-      encoding: 'utf-8',
-    });
+    let commandResult;
+    try {
+      commandResult = spawnSync(command, args, {
+        stdio: stdio ?? 'pipe',
+        encoding: 'utf-8',
+      });
+    } catch (e) {
+      console.log(e);
+      throw e;
+    }
 
+    if (commandResult.stderr) {
+      console.log('--stdout--');
+      console.log(commandResult.stdout);
+      console.log('--stderr--');
+      console.log(commandResult.stderr);
+      console.log('--end--');
+    }
     if (commandResult.status !== 0) {
       throw new Error(commandResult.stderr ?? '');
     }
