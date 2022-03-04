@@ -226,6 +226,13 @@ jobs:
       - store_artifacts:
           path: /tmp/cypress-record
           destination: cypress
+      - run:
+          name: prep artifacts
+          when: always
+          command: zip -r /tmp/storybook-e2e-core-out.zip /tmp/storybook-e2e-testing
+      - store_artifacts:
+          path: /tmp/storybook-e2e-core-out.zip
+          destination: e2e
   cra-bench:
     executor:
       class: medium
@@ -273,13 +280,13 @@ jobs:
       - run:
           name: run e2e tests vue
           command: yarn test:e2e-framework --pnp sfcVue
+      - store_artifacts:
+          path: /tmp/cypress-record
+          destination: cypress
       - run:
           name: prep artifacts
           when: always
           command: zip -r /tmp/storybook-e2e-testing-out.zip /tmp/storybook-e2e-testing
-      - store_artifacts:
-          path: /tmp/cypress-record
-          destination: cypress
       - store_artifacts:
           path: /tmp/storybook-e2e-testing-out.zip
           destination: e2e
