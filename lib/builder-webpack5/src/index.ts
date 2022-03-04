@@ -166,5 +166,5 @@ export const build: WebpackBuilder['build'] = async ({ options, startTime }) => 
   });
 };
 
-export const corePresets = [require.resolve('./presets/preview-preset.js')];
-export const overridePresets = [require.resolve('./presets/custom-webpack-preset.js')];
+export const corePresets = [require.resolve('./preview-preset.js')];
+export const overridePresets = [require.resolve('./custom-webpack-preset.js')];
